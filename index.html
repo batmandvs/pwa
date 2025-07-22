@@ -11,7 +11,7 @@
 <body>
     <div id="status" class="online">🟢 Online</div>
   <div class="container">
-    <h1>📚 Perpustakaan Sederhana</h1>
+    <h1> Perpustakaan Sederhana</h1>
     <form id="book-form">
       <input type="text" id="title" placeholder="Judul Buku" required />
       <input type="text" id="author" placeholder="Penulis" required />
@@ -20,11 +20,16 @@
     <ul id="book-list"></ul>
   </div>
 
+   <button id="installBtn" hidden>Install Aplikasi</button>
+
   <script src="main.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js').then(() => console.log('Service Worker Registered'));
     }
   </script>
+
+
+
 </body>
 </html>
