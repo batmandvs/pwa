@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4CAF50" />
+  <title>Perpustakaan PWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="status" class="online">🟢 Online</div>
+  <div class="container">
+    <h1>📚 Perpustakaan Sederhana</h1>
+    <form id="book-form">
+      <input type="text" id="title" placeholder="Judul Buku" required />
+      <input type="text" id="author" placeholder="Penulis" required />
+      <button type="submit">Tambah Buku</button>
+    </form>
+    <ul id="book-list"></ul>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(() => console.log('Service Worker Registered'));
+    }
+  </script>
+</body>
+</html>
